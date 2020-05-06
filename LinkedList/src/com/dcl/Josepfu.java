@@ -13,9 +13,9 @@ public class Josepfu {
         circleSingleLinkedList.addNode(new Boy(5));
         circleSingleLinkedList.addNode(new Boy(6));
 
-        //circleSingleLinkedList.showList(10);
+        circleSingleLinkedList.showList();
 
-        circleSingleLinkedList.outQueue(4,3);
+        //circleSingleLinkedList.outQueue(4,3);
     }
 }
 
@@ -34,12 +34,19 @@ class CircleSingleLinkedList{
     }
 
     //打印环形链表
-    public void showList(int num){
+    public void showList(){
         cur = first;
-        for (int i = 0;i<num ;i++){
+        while (true){
             System.out.println(cur.getNo());
+            if (cur.next == first){
+                break;
+            }
             cur = cur.next;
         }
+        /*for (int i = 0;i<num ;i++){
+            System.out.println(cur.getNo());
+            cur = cur.next;
+        }*/
     }
 
     //出链表序列
