@@ -42,12 +42,16 @@ class CircleSingleLinkedList{
         }
     }
 
+    //出链表序列
     public void outQueue(int k ,int m){
         cur = first;
+        //brfore指向当前节点的前一个节点
         Boy before = null;
+        //循环遍历到第K个节点
         for (int i = 1; i < k; i++) {
             cur = cur.next;
         }
+        //出链表逻辑  --> before指向当前节点的下一个节点，当前节点的next置null，当前节点指向before的下一个节点
         while(cur != null){
             for (int i = 1; i < m; i++){
                 before = cur;
