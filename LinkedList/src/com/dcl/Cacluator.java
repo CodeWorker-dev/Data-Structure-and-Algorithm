@@ -16,7 +16,7 @@ import java.util.List;
 public class Cacluator {
     public static void main(String[] args) {
         //表达式
-        String expersion = "50-8*10-22+15-7+100";
+        String expersion = "7*2*2-5+1-5+3-4";
         //数栈
         ArrayStack1 numStack = new ArrayStack1(10);
         //符号栈
@@ -38,29 +38,6 @@ public class Cacluator {
         }
         expStrArr[index++] = keyNum;
 
-        //while循环扫描表达式数据
-       /* index = 0;
-        while(true){
-
-            //如果是符号
-            if (signStack.isOper(expStrArr[index].charAt(0))){
-                char sign = expStrArr[index].charAt(0);
-                if (signStack.isEmppty()){
-                    //如果符号栈为空，直接加入到符号栈中
-                    signStack.push(sign);
-                }else {
-                    //如果符号栈不为空，当前符号跟符号栈中的符号进行优先级比较
-                    if (signStack.priority(sign)<=signStack.peek()){
-
-                    }
-                }
-            }else {
-                //如果不是符号，那么就是数字
-                numStack.push(Integer.parseInt(expStrArr[index]));
-                numStack.showStack();
-            }
-            index++;
-        }*/
         //对表达式数组进行遍历
         for (String s : expStrArr) {
             if (s != null) {
@@ -71,16 +48,6 @@ public class Cacluator {
                         //如果符号栈为空的情况
                         signStack.push(sign);
                     } else {
-                        //符号栈不为空的情况，将当前符号和栈顶的符号进行优先级比较
-                      /*  if (signStack.priority(sign) <= signStack.priority(signStack.peek())) {
-                            //当前符号的优先级小于等于栈顶符号的优先级，先进行运算
-                            numStack.cal((char) signStack.pop());
-                            signStack.push(sign);
-                            //numStack.showStack();
-                        } else {
-                            //当前符号优先级大于栈顶符号的优先级，直接进栈
-                            signStack.push(sign);
-                        }*/
                         while (true) {
                             if (signStack.isEmppty()){
                                 signStack.push(sign);
@@ -111,8 +78,7 @@ public class Cacluator {
             numStack.cal((char) signStack.pop());
         }
         numStack.showStack();
-        System.out.println("-----------------------");
-        signStack.showStack();
+
     }
 }
 
