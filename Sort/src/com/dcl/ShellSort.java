@@ -23,9 +23,11 @@ public class ShellSort {
         System.out.println("使用多少时间："+(end-start)+"ms");
     }
 
+    //希尔排序[插入排序的改进]-->缩小增量排序
     public static void shellSort(int[] arr) {
-
+        //逐次缩小增量
         for (int gap = arr.length / 2; gap > 0; gap /= 2) {
+            //常规插入排序，跳跃式插入，按照增量分组，在组内排序
             for (int i = gap; i < arr.length; i++) {
                 int index = i - gap;
                 int tmp = arr[i];
