@@ -29,7 +29,7 @@ public class SelectSort {
     public static void selectSort(int[] arr){
         //需要进行 n-1 轮次选择
         for (int i = 0;i<arr.length-1;i++){
-            //假设当前轮次的第一个数是最小的  K记录下标  min表示最小的值
+            //假设当前轮次的第一个数是最小的  K记录下标  min表示最小的值;
             int k = i;
             int min = arr[i];
             //与arr[i]后面的值一一比较，每次选择出较小的那个值
