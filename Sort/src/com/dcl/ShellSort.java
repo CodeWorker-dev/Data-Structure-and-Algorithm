@@ -8,7 +8,7 @@ import java.util.Arrays;
  */
 public class ShellSort {
     public static void main(String[] args) {
-        //int arr[] = {7, 4, 40, 5, 8, 3, 15, 28, 39, 23,11};
+        //int arr[] ={7, 4, 40, 5, 8, 3, 15, 28, 39, 23,11};
 
         int arr[] = new int[8000000];
         for (int i = 0; i < 8000000; i++) {
