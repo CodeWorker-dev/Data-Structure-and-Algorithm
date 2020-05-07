@@ -27,7 +27,7 @@ public class ShellSort {
     public static void shellSort(int[] arr) {
         //逐次缩小增量
         for (int gap = arr.length / 2; gap > 0; gap /= 2) {
-            //常规插入排序，跳跃式插入，按照增量分组，在组内排序
+            //常规插入排序，跳跃式插入，按照增量分组，在组内排序;
             for (int i = gap; i < arr.length; i++) {
                 int index = i - gap;
                 int tmp = arr[i];
