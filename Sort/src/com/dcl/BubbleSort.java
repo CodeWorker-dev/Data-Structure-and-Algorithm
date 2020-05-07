@@ -28,7 +28,7 @@ public class BubbleSort {
     public static void bubbleSort(int[] arr){
         //计次
         int count=0;
-        //直接跳出标志位，每开启一轮排序，flag为true。每轮排序结束进行判断，如果没发生交换，就说明整个数组已经排好序，直接跳出即可;
+        //直接跳出标志位 ，每开启一轮排序，flag为true。每轮排序结束进行判断，如果没发生交换，就说明整个数组已经排好序，直接跳出即可;
         boolean flag;
         int temp;
         for (int i = 0;i<arr.length-1;i++){
