@@ -2,6 +2,7 @@ package com.dcl.search;
 
 import javax.lang.model.element.VariableElement;
 import java.util.Arrays;
+import java.util.HashMap;
 
 /**
  * @author dcl
